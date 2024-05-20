@@ -129,3 +129,60 @@ hello <- function() {
   print("Hello, world!")
 }
 ```
+
+
+Types of vectors: six!
+
+* integer
+* double
+* character
+* logical
+* complex
+* raw
+
+
+Assigning a variable
+
+```r
+vrbl <- 10
+```
+
+
+Determining if a variable is a vector
+
+```r
+is.vector(x)
+```
+
+Determining the type of a variable
+
+```r
+typeof(vrbl)
+```
+
+Listing all of the variables in the environment
+
+```r
+ls()
+```
+
+
+Note: Check out the R related actions:
+
+github.com/r-lib/actions
+
+
+From the terminal getting help
+
+```r
+?is.complex()
+?typeof()
+```
+
+The question mark tells R to open the help menu for the function to the right.
+
+Note: all vector elements must be of the same type
+
+## References
+
+* [Jime Hester](https://www.jimhester.com/talk/2020-rsc-github-actions/)
