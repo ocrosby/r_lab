@@ -588,3 +588,74 @@ my.pok = read.table("./data/pokRdex-comma.csv",
                     header = TRUE, 
                     stringsAsFactors = FALSE)
 
+
+
+deck <- c("Duke", "Assassin", "Captain", "Ambassador", "Contessa")
+print(deck)
+
+hand <- sample(deck, size = 3, replace = TRUE)
+print(hand)
+
+draw <- function() {
+  deck <- c("Duke", "Assassin", "Captain", "Ambassador", "Contessa")
+  hand <- sample(deck, size = 3, replace = TRUE)
+  
+  return(hand)
+}
+
+shuffle <- function(deck) {
+  deck_length <- length(deck)
+  
+  random <- sample(1:deck_length, size = deck_length)
+  deck.s <- deck[random]
+  
+  return(deck.s)
+}
+
+deal <- function(deck, n) {
+  shuffled <- shuffle(deck)
+  cards <- shuffled[1:3]
+  
+  return(cards)
+}
+
+deal(deck)
+
+
+
+# Data Frames
+
+# Data frames are two-dimensional data structures
+# They are used to store data in rows and columns
+# They can store different types of data
+# They are similar to matrices but have additional features
+
+# Vectors of equal length
+# 2. data.frame() function
+
+title <- c("Star Wars", "The Empire Strikes Back", "Return of the Jedi", 
+           "The Phantom Menace", "Attack of the Clones", "Revenge of the Sith",
+           "The Force Awakens")
+year <- c(1977, 1980, 1983, 1999, 2002, 2005, 2015)
+length.min <- c(121, 124, 131, 136, 142, 140, 135)
+box.office.mil <- c(787, 534, 572, 1027, 657, 849, 2059)
+
+my.data <- data.frame(title, year, length.min, box.office.mil)
+my.data
+
+names(my.data) <- c("Movie Title", "Release Year", "Length in Minutes", "Box Office")
+my.data
+
+str(my.data)
+
+# install.packages("tidyverse")
+
+# library(tidyverse)
+
+library(ggplot2) # data visualization
+library(dplyr) # data manipulation tools, filter, arrange, mutate
+library(readr) # data import
+library(tidyr) # data tidying tools, gather, spread
+library(tibble) # data frame creation
+library(purrr) # functional programming tools
+
