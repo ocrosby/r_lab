@@ -579,3 +579,12 @@ addition <- function(a, b) {
 }
 
 addition(2, 3)
+
+# Loading Data
+
+my.pok = read.table("./data/pokRdex-comma.csv", 
+                    sep = ",", 
+                    quote="\"", 
+                    header = TRUE, 
+                    stringsAsFactors = FALSE)
+
